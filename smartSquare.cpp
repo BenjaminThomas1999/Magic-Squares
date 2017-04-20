@@ -69,7 +69,7 @@ int main(){
 		std::string str = std::to_string(i);
 		int errorIndex = uniqueAndNoZeros(str);
 		
-		if(duplicate != -1){
+		if(errorIndex != -1){
 			i += pow(10, str.length()-errorIndex-1)-1;
 		}else{
 			for(int i = 0; i < 9; i++){
@@ -77,7 +77,6 @@ int main(){
 			}
 			if(verify(square)){
 				printSquare(square);
-				solutions++;
 			}
 		}
 	}
